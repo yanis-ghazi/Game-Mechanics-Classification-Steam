@@ -5,92 +5,92 @@
 [![Machine Learning](https://img.shields.io/badge/ML-Stacking--Ensemble-green.svg)](https://scikit-learn.org/)
 [![NLP](https://img.shields.io/badge/NLP-BERT--Embeddings-red.svg)](https://sbert.net/)
 
-## 📌 Présentation du Projet
-Ce projet de recherche en **ludologie computationnelle** explore la structure profonde du game design à travers le prisme de la **folksonomie de Steam**. En analysant les données de plus de **126 000 jeux**, nous transformons la "sagesse des foules" (tags utilisateurs) en une **ontologie multidimensionnelle** rigoureuse, validée par des cadres théoriques académiques.
+## 📌 Project Overview
+This research project in **computational ludology** explores the deep structure of game design through the lens of **Steam's folksonomy**. By analysing data from more than **126,000 games**, we turn the "wisdom of the crowd" (user tags) into a rigorous **multidimensional ontology**, validated against established academic frameworks.
 
-### ❓ La Question de Recherche
-> **"Comment passer d'une folksonomie utilisateur bruitée à une ontologie structurée des mécaniques de jeu capable de modéliser l'évolution du design et l'hybridité des genres ?"**
-
----
-
-## 🚀 Fonctionnalités Clés
-
-*   **📊 Analyse Multidimensionnelle** : Structuration du gameplay en 8 dimensions VGMS (Genre, Mechanics, Theme, Mood, Aesthetics, Perspective, Setting, Players).
-*   **🤖 Classification Automatisée** : Pipeline de Machine Learning utilisant un **Stacking Classifier** (Random Forest + XGBoost) pour valider la structure des tags.
-*   **🧠 Sémantique NLP** : Utilisation de **BERT** (`all-mpnet-base-v2`) pour aligner l'usage social des tags avec leur sens linguistique.
-*   **📈 Évolution du Design** : Modélisation de la hiérarchie des genres et des mécaniques via la **Subsumption** et le **PMI** temporel.
+### ❓ Research Question
+> **"How can a noisy user folksonomy be turned into a structured ontology of game mechanics, capable of modelling the evolution of design and the hybridity of genres?"**
 
 ---
 
-## 🛠️ Installation et Utilisation
+## 🚀 Key Features
+
+*   **📊 Multidimensional Analysis**: Gameplay is structured along 8 VGMS dimensions (Genre, Mechanics, Theme, Mood, Aesthetics, Perspective, Setting, Players).
+*   **🤖 Automated Classification**: A machine learning pipeline built on a **Stacking Classifier** (Random Forest + XGBoost) validates the structure of the tags.
+*   **🧠 NLP Semantics**: **BERT** (`all-mpnet-base-v2`) is used to align the social usage of tags with their linguistic meaning.
+*   **📈 Design Evolution**: The hierarchy of genres and mechanics is modelled through **Subsumption** and temporal **PMI**.
+
+---
+
+## 🛠️ Installation and Usage
 
 ### 1. Installation
 ```bash
-git clone https://github.com/votre-repo/Game-Mechanics-Classification-Steam.git
+git clone https://github.com/yanis-ghazi/Game-Mechanics-Classification-Steam.git
 cd Game-Mechanics-Classification-Steam
 pip install -r requirements.txt
 ```
 
-### 2. Pipeline de Mise à Jour (Nouveaux Jeux)
+### 2. Update Pipeline (New Games)
 ```bash
 python scripts/New_Games_Gameplay_Taxonomy_Creation.py
 ```
 
 ---
 
-## 🔬 Méthodologie en 8 Étapes
+## 🔬 8-Step Methodology
 
-Le projet est articulé autour de 8 notebooks de recherche (`analysis/`) :
+The project is organised around 8 research notebooks (`analysis/`):
 
-1.  **Exploration** (`1_First_Data_Base_Analysis.ipynb`) : Nettoyage et motifs fréquents via **FP-Growth**.
-2.  **Taxonomie** (`2_Gameplay_Tag_Taxonomy.ipynb`) : Mapping sémantique vers le standard **VGMS**.
-3.  **Réseaux** (`3_Network_Analysis_Cooccurrence.ipynb`) : Calcul du **Lift** et affinités de design.
-4.  **Clustering** (`4_Folksonomic_Clustering_Analysis.ipynb`) : Détection de communautés via l'**Algorithme de Louvain**.
-5.  **Comparaison** (`5_Expert_vs_Folksonomy_Comparison.ipynb`) : Fossé sémantique entre **Éditeurs** et **Joueurs**.
-6.  **ML** (`6_Machine_Learning_Classification.ipynb`) : Validation par prédiction multi-label (Accuracy ~51%).
-7.  **NLP** (`7_NLP_Deep_Learning_Enrichment.ipynb`) : Analyse de cohérence par embeddings **BERT**.
-8.  **Ontologie** (`8_Ontology_and_Diachronic_Analysis.ipynb`) : Hiérarchies par **Subsumption** et analyse temporelle.
+1.  **Exploration** (`1_First_Data_Base_Analysis.ipynb`): Cleaning and frequent pattern mining with **FP-Growth**.
+2.  **Taxonomy** (`2_Gameplay_Tag_Taxonomy.ipynb`): Semantic mapping to the **VGMS** standard.
+3.  **Networks** (`3_Network_Analysis_Cooccurrence.ipynb`): **Lift** computation and design affinities.
+4.  **Clustering** (`4_Folksonomic_Clustering_Analysis.ipynb`): Community detection with the **Louvain algorithm**.
+5.  **Comparison** (`5_Expert_vs_Folksonomy_Comparison.ipynb`): The semantic gap between **publishers** and **players**.
+6.  **ML** (`6_Machine_Learning_Classification.ipynb`): Validation through multi-label prediction (accuracy ~51%).
+7.  **NLP** (`7_NLP_Deep_Learning_Enrichment.ipynb`): Coherence analysis with **BERT** embeddings.
+8.  **Ontology** (`8_Ontology_and_Diachronic_Analysis.ipynb`): **Subsumption** hierarchies and temporal analysis.
 
 ---
 
-## 📂 Architecture du Dépôt
+## 📂 Repository Structure
 
 ```text
-├── analysis/           # Notebooks de recherche (étapes 1 à 8)
-├── data/               # Bases SQLite et Exports CSV (Folksonomic_Clusters.csv)
-├── docs/               # Documentation détaillée et définitions VGMS
-├── reports/            # Rapports de cohérence (classification, clustering)
-├── scripts/            # Modèles BERT adaptés et scripts de production
-└── requirements.txt    # Dépendances du projet
+├── analysis/           # Research notebooks (steps 1 to 8)
+├── data/               # SQLite databases and CSV exports (Folksonomic_Clusters.csv)
+├── docs/               # Detailed documentation and VGMS definitions
+├── reports/            # Consistency reports (classification, clustering)
+├── scripts/            # Adapted BERT models and production scripts
+└── requirements.txt    # Project dependencies
 ```
 
 ---
 
-## 📚 État de l'Art
+## 📚 State of the Art
 
-Le projet s'appuie sur des travaux académiques de référence :
+The project builds on reference academic work:
 
 
-| **Auteur(s)** | **Titre** | **Apport dans le Projet** |
+| **Author(s)** | **Title** | **Contribution to the Project** |
 | :--- | :--- | :--- |
-| **Windleharth et al.** (2016) | *Full Steam Ahead* | Taxonomie VGMS (Video Game Metadata Schema). |
-| **Elias et al.** (2012) | *Characteristics of Games* | Analyse structurelle des systèmes de jeux. |
-| **Li & Zhang** (2020) | *Network Analysis on Steam Tags* | Méthodologie d'analyse de réseau de co-occurrence. |
-| **Adrian et al.** (2015) | *ConTag: Semantic Tag Recommendation* | Inspiration pour le système de recommandation sémantique. |
-| **Lu, Park, & Hu** (2010) | *User tags vs expert-assigned terms* | Comparaison Folksonomie vs Experts (Notebook 5). |
-| **Lee et al.** (2014) | *Video Game Metadata Schema* | Validation des dimensions de classification. |
-| **Sanderson & Croft** (1999) | *Deriving concept hierarchies from text* | Algorithme de Subsumption pour la hiérarchie des tags. |
-| **Hamilton et al.** (2016) | *Diachronic Word Embeddings...* | Mesure de la dérive sémantique via le PMI. |
-| **Hsu** (2006) | *Jacks of all trades...* | Concept d'Entropie de Shannon pour mesurer l'hybridité. |
-| **Aarseth et al.** (2003) | *A multidimensional typology of games* | Fondements de la classification multidimensionnelle. |
-| **Swink** (2009) | *Game Feel: A Game Designer's Guide* | Définition des mécaniques et de la boucle de gameplay. |
+| **Windleharth et al.** (2016) | *Full Steam Ahead* | VGMS taxonomy (Video Game Metadata Schema). |
+| **Elias et al.** (2012) | *Characteristics of Games* | Structural analysis of game systems. |
+| **Li & Zhang** (2020) | *Network Analysis on Steam Tags* | Methodology for co-occurrence network analysis. |
+| **Adrian et al.** (2015) | *ConTag: Semantic Tag Recommendation* | Inspiration for the semantic recommendation system. |
+| **Lu, Park, & Hu** (2010) | *User tags vs expert-assigned terms* | Folksonomy vs experts comparison (Notebook 5). |
+| **Lee et al.** (2014) | *Video Game Metadata Schema* | Validation of the classification dimensions. |
+| **Sanderson & Croft** (1999) | *Deriving concept hierarchies from text* | Subsumption algorithm for the tag hierarchy. |
+| **Hamilton et al.** (2016) | *Diachronic Word Embeddings...* | Measuring semantic drift through PMI. |
+| **Hsu** (2006) | *Jacks of all trades...* | Shannon entropy to measure hybridity. |
+| **Aarseth et al.** (2003) | *A multidimensional typology of games* | Foundations of the multidimensional classification. |
+| **Swink** (2009) | *Game Feel: A Game Designer's Guide* | Definition of mechanics and the gameplay loop. |
 
 ---
 
-## 🔗 Liens et Documentation
-*   **Documentation Complète** : [docs/Analysis_Files_Documentation.md](docs/Analysis_Files_Documentation.md)
-*   **Définitions Ludologiques** : [docs/Ludological_Terms_Definitions.md](docs/Ludological_Terms_Definitions.md)
-*   **Bibliographie** : Retrouvez nos sources sur notre [Librairie Zotero](https://www.zotero.org/groups/6288352/pdr_stearn/library).
+## 🔗 Links and Documentation
+*   **Full Documentation**: [docs/Analysis_Files_Documentation.md](docs/Analysis_Files_Documentation.md)
+*   **Ludological Definitions**: [docs/Ludological_Terms_Definitions.md](docs/Ludological_Terms_Definitions.md)
+*   **Bibliography**: Our sources are available in our [Zotero library](https://www.zotero.org/groups/6288352/pdr_stearn/library).
 
 ---
-*Projet de recherche "Game Mechanics Classification Steam" - 2025-2026*
+*Research project "Game Mechanics Classification Steam" - 2025-2026*
